@@ -44,7 +44,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 # To make predictions on a new image:
-new_image = cv2.imread("TEST\\testdog1.jpg")  # Use the correct path separator
+new_image = cv2.imread("TEST\\testlion1.jpg")  # Use the correct path separator
 new_image = cv2.resize(new_image, (500, 500))  # Resize to match the training data dimensions
 
 new_features = new_image.flatten()
