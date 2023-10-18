@@ -1,7 +1,7 @@
 import os
 import cv2
 import numpy as np
-from sklearn import svm
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -32,8 +32,9 @@ y = np.array(labels)
 # Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create and train the SVM classifier with fine-tuned parameters
-clf = svm.SVC(kernel='linear', C=1, gamma='scale')
+# Create and train the KNN classifier with a specified number of neighbors (k)
+k = 5  # You can change k to your preference
+clf = KNeighborsClassifier(n_neighbors=k)
 clf.fit(X_train, y_train)
 
 # Make predictions on the test set
