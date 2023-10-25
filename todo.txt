@@ -1,0 +1,6 @@
+dog 75 image
+cat 50 image
+cow 100 image
+horse 100 image
+goat 100 immage
+monkey 100 image
