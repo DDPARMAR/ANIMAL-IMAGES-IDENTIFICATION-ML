@@ -20,7 +20,7 @@ for i in data:
         print("Reading image:", image_path + " Label: " + i)
 
         image = cv2.imread(image_path)
-        image = cv2.resize(image, (600, 600)) 
+        image = cv2.resize(image, (500, 500)) 
 
         image = image.flatten()
         labels.append(i)
@@ -41,7 +41,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 new_image = cv2.imread("TEST\\testlion1.jpg") 
-new_image = cv2.resize(new_image, (600, 600)) 
+new_image = cv2.resize(new_image, (500, 500)) 
 
 new_image_data = new_image.flatten()
 
